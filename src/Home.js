@@ -106,11 +106,18 @@ function Home() {
                 />
             </body>
             <footer>
-                <div className="Web-footer">
-                    <h2>Urban <span className="green-text">Green</span></h2>
-                </div>
-                <div className='Contact'>
-                    <Link className='link-text' to="/contact">Contact Us</Link>
+                <div className='footer-container'>
+                    <div className='FooterLogo'>
+                        <img src={require('./Designer.jpeg')} className='CompanyLogoFooter' alt="logo" />
+                    </div>
+                    <div className='FooterText'>
+                        <div className="Web-footer">
+                            <h2>Urban <span className="green-text">Green</span></h2>
+                        </div>
+                        <div className='Contact'>
+                            <Link className='link-text' to="/contact">Contact Us</Link>
+                        </div>
+                    </div>
                 </div>
             </footer>
         </div>
