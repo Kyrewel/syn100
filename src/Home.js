@@ -1,7 +1,6 @@
 import './Home.css';
 import TextBlock from './TextBlock';
 import Card from './Card';
-import { LogoSVG, BuildingSVG, LeafSVG } from './SVGs';
 
 function Home() {
     return (
