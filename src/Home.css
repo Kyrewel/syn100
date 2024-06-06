@@ -145,7 +145,7 @@ html {
 .BodyText1 h1,
 .BodyText2 h1 {
   width: 35%;
-  font-size: 6vw;
+  font-size: 4vw;
   /* Constant font size for all displays */
   text-align: left;
   display: flex;
@@ -232,25 +232,25 @@ html {
 
 @media (min-width: 1201px) {
   .DispCard {
-    height: 300px;
-    width: 200px;
+    height: 380px;
+    width: 300px;
   }
 }
 
 @media (min-width: 801px) and (max-width: 1200px) {
   .DispCard {
-    height: calc(300px * .75);
+    height: calc(380px * .75);
     /* 270px is approximately 84.375% of 320px */
-    width: calc(200px * 0.75);
+    width: calc(300px * 0.75);
     /* 150px is approximately 68.182% of 220px */
   }
 }
 
 @media (max-width: 800px) {
   .DispCard {
-    height: calc(300px * 0.5);
+    height: calc(380px * 0.5);
     /* 220px is approximately 68.75% of 320px */
-    width: calc(200px * 0.5);
+    width: calc(300px * 0.5);
     /* 110px is 50% of 220px */
   }
 }
@@ -317,12 +317,161 @@ html {
 /* ------------------------------- FOOTER ------------------------------- */
 
 footer {
-  height: 20vh;
+  height: 10vh;
   width: 100%;
   background-color: #141111;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  padding-left: 15%;
+  padding-bottom: 5%;
+}
+
+a:visited {
+  color: inherit;
+  /* Keeps the color the same as unvisited links */
+  text-decoration: inherit;
+  /* Keeps the text decoration the same as unvisited links */
+}
+
+a {
+  text-decoration: none;
+  /* Remove underline from visited links */
+}
+
+
+.Web-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #6200ea;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.Web-footer a:hover {
+  background-color: #3700b3;
+}
+
+
+
+.contact-container {
+  /* background-color: #121212; */
+  color: #ffffff;
+  padding: 20px;
+  /* border-radius: 8px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: left;
+  /* Ensure labels are left-aligned */
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  position: relative;
+  outline: none;
+  /* Remove the default outline */
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+  color: #888;
+}
+
+.contact-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #6200ea;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-container button:hover {
+  background-color: #3700b3;
+}
+
+nav {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+nav a img {
+  max-width: 50px;
+  /* Making the image small */
+  display: block;
+}
+
+/* Blinking cursor effect */
+.contact-container input::after,
+.contact-container textarea::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 2px;
+  height: 1em;
+  background-color: #ffffff;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Remove highlighted effect on focus */
+.contact-container input:focus,
+.contact-container textarea:focus {
+  background-color: #2c2c2c;
+  /* Maintain the same background color */
+  border-color: #6200ea;
+  /* Optional: Change border color on focus */
+}
+
+/* Green text style */
+.green-text {
+  color: #00dc63;
+  /* Adjust the shade of green as needed */
 }
