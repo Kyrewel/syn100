@@ -49,6 +49,34 @@ function Home() {
                     title="Our Vision"
                     text="Urban Green envisions a future where every urban rooftop is a thriving green space, contributing to a healthier, more sustainable urban environment. We believe in the power of green infrastructure to transform cities, improve air quality, and provide fresh, local food sources."
                 />
+
+                <TextBlock
+                    className="BodyText3"
+                    title="Our Impact"
+                    text="In just ONE month in ONE college at the University of California, San Diego...."
+                />
+
+                <TextBlock
+                    className="BodyText4"
+                    title="5000 km"
+                    text="Food Miles Mitigated"
+                />
+                <TextBlock
+                    className="BodyText4"
+                    title="10°C"
+                    text=" Cooling Achieved"
+                />
+                <TextBlock
+                    className="BodyText4"
+                    title="3000 m²"
+                    text="Space Utilized"
+                />
+                <TextBlock
+                    className="BodyText4"
+                    title="2000"
+                    text=" Heads of Lettuce Grown"
+                />
+
                 <TextBlock
                     className="BodyText3"
                     title="How It Works"
@@ -71,7 +99,7 @@ function Home() {
                 />
 
                 <TextBlock
-                    className="BodyText2"
+                    className="BodyText3"
                     title="Community Engagement"
                     text="We engage local communities in the creation and maintenance of green rooftops, fostering a sense of ownership and environmental stewardship."
                 />
