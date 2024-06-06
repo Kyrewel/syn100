@@ -361,7 +361,7 @@ html {
 
 footer {
   height: 10vh;
-  width: 100%;
+  width: 60%;
   background-color: #141111;
   color: white;
   display: flex;
@@ -517,4 +517,26 @@ nav a img {
 .green-text {
   color: #00dc63;
   /* Adjust the shade of green as needed */
+}
+
+.link-text {
+  color: white;
+  /* Set text color to white */
+  background-color: orange;
+  /* Set background color to orange */
+  padding: 3px 2px;
+  /* Add padding to increase the size of the button */
+  border-radius: 5px;
+  /* Round the corners of the button */
+  text-decoration: none;
+  /* Remove underline from the link */
+  display: inline-block;
+  /* Ensure it's in line and behaves like a button */
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.link-text:hover {
+  background-color: darkorange;
+  /* Darker orange on hover for better interaction feedback */
 }

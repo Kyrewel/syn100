@@ -14,7 +14,7 @@ function Home() {
                     <h1>Urban <span className="green-text">Green</span></h1>
                     <p>Farm to table? More like roof to table.</p>
                     <Link to="/contact" className="Contact-link">
-                        Visit our Contact Page
+                        <span className="link-text">Contact Us</span>
                     </Link>
                 </div>
             </header>
@@ -109,7 +109,7 @@ function Home() {
                     <h2>Urban <span className="green-text">Green</span></h2>
                 </div>
                 <div className='Contact'>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link className='link-text' to="/contact">Contact Us</Link>
                 </div>
             </footer>
         </div>
