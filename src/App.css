@@ -1,38 +1,328 @@
-.App {
-  text-align: center;
+html {
+  background-color: #141111;
+  /* Set the overall page background color for the whole page */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ------------------------------- HEADER ------------------------------- */
+
+.Web-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #141111;
+  /* Changed from 100% to 100vh to ensure it spans the full viewport height */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Web-header-background {
+  position: absolute;
+  width: 100%;
+  height: 58%;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+@keyframes floatUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Web-header-background {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+
+.Web-header-text {
+  position: absolute;
+  height: 70%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  color: white;
+  padding: 5%;
+}
+
+@media (min-width: 1201px) {
+  .CompanyLogo {
+    width: 450px;
+    /* Suitable for large screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    padding: 2vw;
+    /* Padding for aesthetics */
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .CompanyLogo {
+    width: 350px;
+    /* Suitable for medium screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    padding: 2vw;
+    /* Slightly less padding */
+  }
+}
+
+@media (max-width: 800px) {
+  .CompanyLogo {
+    width: 250px;
+    /* Suitable for small screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    padding: 2vw;
+    /* Minimal padding */
+  }
+}
+
+.Web-header-text h1 {
+  font-size: 12vw;
+  /* Smaller size for small screens */
+  font-weight: bolder;
+  padding: 0;
+  margin: 1vh 0;
+}
+
+.Web-header-text p {
+  font-size: 3vw;
+  /* Smaller size for small screens */
+  padding: 0;
+  margin: 1vh 1vh;
+}
+
+.Web-header-text a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vw;
+  padding: 0 .7vw;
+}
+
+.Web-body {
+  padding: 0 10%;
+  background-color: white;
+}
+
+@media (max-width: 800px) {
+  .Web-body {
+    padding: 5%;
+  }
+}
+
+/* ------------------------------- BODY ------------------------------- */
+
+/*********** Body Text ***********/
+
+.BodyText1,
+.BodyText2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+.BodyText3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 5%;
+}
+
+.BodyText2 {
+  flex-direction: row-reverse;
+}
+
+.BodyText1 h1,
+.BodyText2 h1 {
+  width: 35%;
+  font-size: 6vw;
+  /* Constant font size for all displays */
+  text-align: left;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.BodyText1 p,
+.BodyText2 p {
+  width: 50%;
+  text-align: left;
+  word-wrap: break-word;
+  margin: 3%;
+}
+
+.BodyText3 h1 {
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 4vw;
+  text-align: left;
+}
+
+.BodyText3 p {
+  width: 100%;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+@media (min-width: 1201px) {
+
+  .BodyText1 p,
+  .BodyText2 p,
+  .BodyText3 p {
+    font-size: 30px;
+    /* Larger font size for larger screens */
+  }
+
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+
+  .BodyText1 p,
+  .BodyText2 p,
+  .BodyText3 p {
+    font-size: 17px;
+    /* Medium font size for medium screens */
+  }
+}
+
+@media (max-width: 800px) {
+
+  .BodyText1 p,
+  .BodyText2 p,
+  .BodyText3 p {
+    font-size: 10px;
+    /* Smaller font size for smaller screens */
+  }
+}
+
+.BodyText2 h1 {
+  margin-left: 6%;
+  /* Add left margin to h1 in BodyText2 for better spacing */
+}
+
+/*********** Card Container ***********/
+
+.Card-container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  /* Ensure all cards stretch to the same height */
+}
+
+.DispCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid rgb(251, 226, 144);
+  border-radius: 0 0 15% 0;
+  margin: 2%
+}
+
+@media (min-width: 1201px) {
+  .DispCard {
+    height: 300px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .DispCard {
+    height: calc(300px * .75);
+    /* 270px is approximately 84.375% of 320px */
+    width: calc(200px * 0.75);
+    /* 150px is approximately 68.182% of 220px */
+  }
+}
+
+@media (max-width: 800px) {
+  .DispCard {
+    height: calc(300px * 0.5);
+    /* 220px is approximately 68.75% of 320px */
+    width: calc(200px * 0.5);
+    /* 110px is 50% of 220px */
+  }
+}
+
+.DispCard img {
+  height: 30%;
+  padding: 5%;
+  /* Adjusted padding to be proportionally smaller */
+}
+
+.DispCard h1 {
+  height: 10%;
+  font-size: 20px;
+  /* Default for desktop */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.DispCard p {
+  font-size: 13px;
+  /* Default for desktop */
+  margin: 5%;
+  /* Adjusted margin to be proportionally smaller */
+}
+
+@media (max-width: 1200px) {
+  .DispCard h1 {
+    font-size: calc(20px * 0.75);
+    /* 75% of desktop size */
+  }
+
+  .DispCard p {
+    font-size: calc(13px * 0.75);
+    /* 75% of desktop size */
+  }
+
+  .DispCard img {
+    height: calc(30% * 0.75);
+    padding: calc(5% * 0.75);
+    /* Proportionally adjust padding */
+  }
+}
+
+@media (max-width: 800px) {
+  .DispCard h1 {
+    font-size: calc(20px * 0.6);
+    /* 60% of desktop size */
+  }
+
+  .DispCard p {
+    font-size: calc(13px * 0.6);
+    /* 60% of desktop size */
+  }
+
+  .DispCard img {
+    height: calc(30% * 0.6);
+    padding: calc(5% * 0.6);
+    /* Proportionally adjust padding */
+  }
+}
+
+/* ------------------------------- FOOTER ------------------------------- */
+
+footer {
+  height: 20vh;
+  width: 100%;
+  background-color: #141111;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
