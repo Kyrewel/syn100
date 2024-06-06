@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div className="App">
+
             <header className="Web-header">
                 <div className='Web-header-background'>
                     <img src={require('./Designer.jpeg')} className='CompanyLogo' alt="logo" />
