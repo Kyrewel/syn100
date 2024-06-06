@@ -1,6 +1,7 @@
 import './Home.css';
 import TextBlock from './TextBlock';
 import Card from './Card';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -12,9 +13,9 @@ function Home() {
                 <div className="Web-header-text">
                     <h1>Urban <span className="green-text">Green</span></h1>
                     <p>Farm to table? More like roof to table.</p>
-                    <a href="/contact" className="Contact-link">
+                    <Link to="/contact" className="Contact-link">
                         Visit our Contact Page
-                    </a>
+                    </Link>
                 </div>
             </header>
             <body className="Web-body">
@@ -108,7 +109,7 @@ function Home() {
                     <h2>Urban <span className="green-text">Green</span></h2>
                 </div>
                 <div className='Contact'>
-                    <a href="/contact">Contact Us</a>
+                    <Link to="/contact">Contact Us</Link>
                 </div>
             </footer>
         </div>

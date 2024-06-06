@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Contact() {
     const [submitted, setSubmitted] = useState(false);
@@ -11,15 +12,15 @@ function Contact() {
     return (
         <main>
             <nav>
-                <a className="back-to-home" href="/">
+                <Link to="/" className="back-to-home">
                     <img src={require('./Designer.jpeg')} alt="Back to Home" />
-                </a>
+                </Link>
             </nav>
             {submitted ? (
                 <div className="contact-container">
                     <h1>Thank You!</h1>
                     <p>Your message has been sent successfully.</p>
-                    <a href="/">Go back to Home</a>
+                    <Link to="/" className="back-to-home">Go back to Home</Link>
                 </div>
             ) : (
                 <div className="contact-container">
